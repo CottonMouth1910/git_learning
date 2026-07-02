@@ -3,8 +3,8 @@ module tb_top();
 
   initial begin
     check_anagram();
-    disp();
-
+    disp_fun();
+    disp_task(); // for merge conflict
   end
 
   function void check_anagram();
@@ -26,7 +26,11 @@ module tb_top();
     end
   endfunction: check_anagram
 
-  function void disp();
+  function void disp_fun();
     $display("Testbench completed.");
   endfunction: disp
+
+  task disp_task();
+    $display("This is a display task.");
+  endtask: disp
 endmodule: tb_top
