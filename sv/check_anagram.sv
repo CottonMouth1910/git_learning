@@ -3,6 +3,8 @@ module tb_top();
 
   initial begin
     check_anagram();
+    disp_fun();
+    disp_task(); // for merge conflict
   end
 
   function void check_anagram();
@@ -23,4 +25,12 @@ module tb_top();
       $display("%s and %s are not anagrams.", str1, str2);
     end
   endfunction: check_anagram
+
+  function void disp_fun();
+    $display("Testbench completed.");
+  endfunction: disp
+
+  task disp_task();
+    $display("This is a display task.");
+  endtask: disp
 endmodule: tb_top
