@@ -1,0 +1,7 @@
+# Ignore all directories named work and everything inside them
+work/
+**/work/
+
+# Ignore Vim swap files
+*.swp
+*.swo
