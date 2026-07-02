@@ -3,6 +3,8 @@ module tb_top();
 
   initial begin
     check_anagram();
+    disp();
+
   end
 
   function void check_anagram();
@@ -23,4 +25,8 @@ module tb_top();
       $display("%s and %s are not anagrams.", str1, str2);
     end
   endfunction: check_anagram
+
+  function void disp();
+    $display("Testbench completed.");
+  endfunction: disp
 endmodule: tb_top
