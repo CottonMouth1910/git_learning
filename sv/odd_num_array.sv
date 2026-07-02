@@ -8,5 +8,6 @@ module tb_top();
     }
 
     $display("arr : %p", arr); // adding comment from temp branch
+    $display("arr : %p", arr); // adding comment from questa branch
   end
 endmodule: tb_top
