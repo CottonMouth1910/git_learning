@@ -8,5 +8,6 @@ module tb_top();
     }
 
     $display("arr : %p", arr); // adding comment from questa branch
+    $display("inside display");
   end
 endmodule: tb_top
