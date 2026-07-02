@@ -7,8 +7,8 @@ module tb_top();
       arr.sum() with  (item inside {1,2,3,4} ? 1: 0) == arr.size();
     }
 
+    $display("arr : %p", arr); // adding comment from temp branch
     $display("arr : %p", arr); // adding comment from questa branch
     $display("inside display");
-    adding conflict comment from questa branch
   end
 endmodule: tb_top
