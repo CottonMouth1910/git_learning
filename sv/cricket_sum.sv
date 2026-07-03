@@ -33,4 +33,8 @@ module tb_top();
       $display("Randomization failed");
     end
   end
+
+  initial begin
+    $display("inside thread 2 at time 0");
+  end
 endmodule: tb_top
