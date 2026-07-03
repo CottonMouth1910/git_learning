@@ -16,4 +16,8 @@ module tb_top();
       end
     end
   endfunction: check_prime
+
+  initial begin
+    $display("pull requst code");
+  end
 endmodule: tb_top
