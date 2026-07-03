@@ -1,4 +1,4 @@
-class 20_over_cricket;
+class cricket;
   
   rand int match_score[20][6];
 
@@ -7,7 +7,12 @@ class 20_over_cricket;
   endfunction: new
 
   constraint match_score_c {
-    match_score.sum() with (item.sum() inside {[0:6]} ? 1 : 0) == match_score.size();
+    match_score.sum() with (
+      (
+        (item.sum() with (item >= 4            ? 1 : 0) >= 1) &&
+        (item.sum() with (item inside {[0:6]}  ? 1 : 0) == 6)
+      ) ? 1 : 0 
+    ) == 20;
   };
 
   function void post_randomize();
@@ -16,15 +21,15 @@ class 20_over_cricket;
     end
   endfunction: post_randomize
 
-endclass: 20_over_cricket
+endclass: cricket
 
 
 module tb_top();
-  20_over_cricket cricket;
+  cricket cric;
 
   initial begin
-    cricket = new();
-    if (!cricket.randomize()) begin
+    cric = new();
+    if (!cric.randomize()) begin
       $display("Randomization failed");
     end
   end
