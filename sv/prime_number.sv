@@ -15,5 +15,5 @@ module tb_top();
         $display("%0d is not a prime number.", num);
       end
     end
-    
+  endfunction
 endmodule: tb_top
