@@ -1,6 +1,6 @@
 module tb_top();
   int num;
-
+  int cal_en;
   initial begin
     check_prime();
   end
