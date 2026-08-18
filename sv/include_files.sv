@@ -17,3 +17,7 @@
 `ifdef SV_CODE1_SV
   `include "sv_code1.sv"
 `endif
+
+`ifdef CLOCK_DIV_SV
+  `include "clock_div.sv"
+`endif
