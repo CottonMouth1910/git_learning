@@ -27,4 +27,4 @@ module tb_top();
       #5 clk = ~clk;
     end
   end
-endmodule: tb_top
+endmodule

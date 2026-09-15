@@ -21,3 +21,19 @@
 `ifdef CLOCK_DIV_SV
   `include "clock_div.sv"
 `endif
+
+`ifdef MATRIX_SV
+  `include "matrix.sv"
+`endif
+
+`ifdef DOUBLE_FLOP_SV
+  `include "double_flop.sv"
+`endif
+
+`ifdef COVERAGE_SV
+  `include "coverage_sample.sv"
+`endif
+
+`ifdef OOP_SV
+  `include "oop.sv"
+`endif
